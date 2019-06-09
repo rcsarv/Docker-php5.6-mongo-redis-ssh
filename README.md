@@ -1,6 +1,10 @@
 # Docker-php5.6-mongo-redis-ssh
-Docker PHP5.6 Mongo Redis SSH
-Pecl
-Curl
-Apache2
-Ubuntu
+Apps: SSH
+
+OS: Ubuntu
+
+PHP: 5.6-fpm
+
+Modules : Mongo, Redis,Curl
+
+http: Apache2
