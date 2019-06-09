@@ -5,7 +5,7 @@ OS: Ubuntu
 
 PHP: 5.6-fpm
 
-Modules : Mongo, Redis, Curl
+Modules : Mongo, Redis, Mysql, Curl
 
 http: Apache2
 
