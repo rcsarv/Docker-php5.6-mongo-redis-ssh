@@ -44,3 +44,8 @@ RUN apt-get install openssh-server -y
 RUN update-rc.d ssh defaults
 RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config
 RUN echo "root:ChaneMeNow" | chpasswd
+
+#Install Cron
+RUN apt install cron -y
+RUN update-rc.d cron defaults
+COPY config/crontab/ /var/spool/cron/crontabs/
