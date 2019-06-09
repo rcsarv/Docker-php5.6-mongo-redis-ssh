@@ -41,11 +41,11 @@ RUN pecl install redis && docker-php-ext-enable redis
 
 #Install SSH
 RUN apt-get install openssh-server -y
-RUN update-rc.d ssh defaults
+RUN update-rc.d ssh enable
 RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config
 RUN echo "root:ChaneMeNow" | chpasswd
 
 #Install Cron
 RUN apt install cron -y
-RUN update-rc.d cron defaults
+RUN update-rc.d cron enable
 COPY config/crontab/ /var/spool/cron/crontabs/
